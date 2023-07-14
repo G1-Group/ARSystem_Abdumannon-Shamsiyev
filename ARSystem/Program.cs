@@ -3,6 +3,9 @@ using ARSystem.Services;
 using ARSystem.Services.Infrastructure;
 
 var simpleFileAccessService = new SimpleFileAccessService("./data/store.json");
+
+await simpleFileAccessService.Initialize();
+
 var dataAccessService = new SimpleDataAccessService(simpleFileAccessService);
 
 
